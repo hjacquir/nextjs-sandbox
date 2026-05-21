@@ -1,8 +1,10 @@
 'use client'
 import Product from '../../components/Products/Product';
 import SearchBar from '../../components/SearchBar/SearchBar'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './products.css'
+import {ListOffer} from '../actions'
+// import {ProductList} from '@/app/components/Products/ProductList'
 
 export default function Products() {
     const products = [
@@ -46,7 +48,8 @@ function List({products, filterText, stockOnly}) {
             }
 
             rows.push(
-                <Product name={product.name} price={product.price} stocked={product.stocked} category={product.category}/>
+                <Product key={product.name} name={product.name} price={product.price} stocked={product.stocked}
+                         category={product.category.name}/>
             )
         }
     );

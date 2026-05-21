@@ -1,5 +1,5 @@
 import Form from "next/form";
-import {AddProduct} from '../actions'
+import {AddOffer} from '../actions'
 
 export default function Add() {
     return (
@@ -8,7 +8,7 @@ export default function Add() {
                 <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
                     Ajouter
                 </h1>
-                <Form action={AddProduct}>
+                <Form action={AddOffer}>
                     <label>Nom : </label>
                     <input name="name" type="text" />
                     <div>
